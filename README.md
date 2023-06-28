@@ -1,3 +1,5 @@
 # random_quiz
 
-start the program by going into the quiz app folder and write the npm start command to make the project workable
+start the program and it will take random quiz options from internet 
+
+in the end it will count the correct and incorect answers

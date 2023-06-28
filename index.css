@@ -1,51 +1,161 @@
 body {
-    text-align: center;
-    background-color: #f7f7f7;
     font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
   }
   
-  h1 {
-    color: #333;
-  }
-  
-  #quiz-container {
+  .container {
+    max-width: 600px;
     margin: 50px auto;
-    max-width: 400px;
     background-color: #fff;
+    border-radius: 5px;
     padding: 20px;
-    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  #question {
+  h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  #question-container {
     margin-bottom: 20px;
   }
   
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-  
-  li {
+  h2 {
+    font-size: 18px;
     margin-bottom: 10px;
   }
   
   button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
     border: none;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 14px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
   button:hover {
     background-color: #45a049;
   }
   
-  #result {
+  #submit-btn {
+    background-color: #2196f3;
     margin-top: 20px;
+  }
+  
+  #submit-btn:hover {
+    background-color: #1e87db;
+  }
+  
+  #score-container {
+    display: none;
+    text-align: center;
+  }
+  
+  #score {
     font-weight: bold;
+    font-size: 24px;
+    color: #4caf50;
+  }
+  
+
+
+  button.correct {
+    background-color: #4caf50;
+  }
+  
+  button.incorrect {
+    background-color: #f44336;
+  }
+  
+
+  .counts-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .counts-container p {
+    margin-bottom: 5px;
+  }
+  
+
+
+  .result-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .result-container p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .result-container span {
+    font-weight: bold;
+    color: #4caf50;
+  }
+
+
+  button.correct,
+.option.correct {
+  background-color: #4caf50;
+}
+
+button.incorrect,
+.option.incorrect {
+  background-color: #f44336;
+}
+
+  
+
+.option.selected {
+    background-color: #2196f3;
+    color: #fff;
+  }
+  
+
+
+  button.selected {
+    background-color: #2196f3;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+
+
+  .result-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .result-container p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .result-container span {
+    font-weight: bold;
+    color: #4caf50;
+  }
+  
+
+
+  .pass-message {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: #4caf50;
   }
   

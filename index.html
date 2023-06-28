@@ -5,26 +5,16 @@
   <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-  <h1>Quiz App</h1>
-  <div id="quiz-container">
-    <h2 id="question"></h2>
-    <ul id="options"></ul>
-    <button onclick="submitAnswer()">Submit</button>
-    <p id="result"></p>
+  <div class="container">
+    <h1>Quiz App</h1>
+    <div id="question-container">
+      <!-- Questions will be displayed here -->
+    </div>
+    <button id="submit-btn">Submit</button>
+    <div id="score-container">
+      <p>Score: <span id="score">0</span></p>
+    </div>
   </div>
-  
-  <div id="add-quiz-container">
-    <form action="" id="NewQuizAdded">
-        <h2>Add Quiz Data</h2>
-        <input type="text" id="question-input" placeholder="Question">
-        <input type="text" id="options-input" placeholder="Options (comma-separated)">
-        <input type="number" id="correct-answer-input" placeholder="Correct Answer (option index)">
-        <button type="submit" class="normal"  readonly>Add Quiz</button>
-        <p id="add-result"></p>
-    </form>
-  </div>
-
   <script src="index.js"></script>
-  <script src="quizadd.js"></script>
 </body>
 </html>

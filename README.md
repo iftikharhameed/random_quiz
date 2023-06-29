@@ -2,7 +2,7 @@
 
 To use the quiz app:
 
-Access the app through a web browser.
+Access the app through a web browser (https://randomquiz01.netlify.app/index.html).
 The app will automatically fetch random quiz questions.
 Read each question carefully and select the appropriate option.
 Click the "Submit" button to submit your answer.

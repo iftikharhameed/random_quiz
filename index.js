@@ -129,8 +129,72 @@ function checkAnswer(event) {
     }
   }
 
+// Display to check pass or fail
+function checkPassFail() {
+  const passPercentage = (correctCount / questions.length) * 100;
 
-  
+  let message = '';
+  if (passPercentage >= 50) {
+    message = 'Congratulations! You passed the test.<a href="index.html">Click To Retake the Quiz</a>';
+
+    const surpriseButton = document.getElementById('surprise-button');
+    surpriseButton.classList.remove('hidden');
+  } else {
+    message = 'Sorry, you failed the test.<a href="index.html">Click To Retake the Quiz</a>';
+  }
+
+  const passFailContainer = document.getElementById('pass-fail-container');
+  passFailContainer.innerHTML = `<p>${message}</p>`;
+}
+
+
+const surpriseButton = document.getElementById('surprise-button');
+surpriseButton.addEventListener('click', showSurprise);
+
+function showSurprise() {
+  const surpriseButton = document.getElementById('surprise-button');
+  surpriseButton.classList.add('hidden');
+
+  // Show alert message
+  alert('Congratulations! You won a trophy!');
+
+
+  // Create and append the trophy/badge element
+  const trophyElement = document.createElement('img');
+  trophyElement.src = './trop.png'; // Replace with your trophy/badge image or SVG file
+  trophyElement.alt = 'Trophy'; // Add alternative text for accessibility
+  trophyElement.classList.add('trophy');
+  document.body.appendChild(trophyElement);
+
+  const starElement = document.createElement('div');
+  starElement.classList.add('shining-star');
+
+  document.body.appendChild(starElement);
+
+  setTimeout(function () {
+    starElement.remove();
+    surpriseButton.classList.remove('hidden');
+  }, 5000);
+
+  // Create smaller stars
+  const numStars = 50; // Adjust the number of stars as desired
+  for (let i = 0; i < numStars; i++) {
+    createStar();
+  }
+}
+
+function createStar() {
+  const starElement = document.createElement('div');
+  starElement.classList.add('star');
+  starElement.style.top = `${getRandomPosition()}vh`;
+  starElement.style.left = `${getRandomPosition()}vw`;
+  document.body.appendChild(starElement);
+}
+
+function getRandomPosition() {
+  return Math.random() * 100;
+}
+
   
   
 
@@ -150,6 +214,8 @@ function displayResults() {
     resultContainer.appendChild(incorrectResult);
   
     questionContainer.appendChild(resultContainer);
+
+    checkPassFail();
   }
   
 
@@ -169,5 +235,6 @@ submitButton.addEventListener('click', function() {
   
   
   
+
 
   

@@ -1,4 +1,4 @@
-# random_quiz
+# Online Random_quiz
 
 To use the quiz app:
 
